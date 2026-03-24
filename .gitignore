@@ -2,7 +2,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
-outputs/
+# Keep selected outputs for README figures on GitHub; ignore everything else there
+outputs/*
+!outputs/*.png
+!outputs/metrics.csv
 checkpoints/
 *.pt
 .DS_Store
