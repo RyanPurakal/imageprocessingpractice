@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+outputs/
+checkpoints/
+*.pt
+.DS_Store
+.mplconfig/
+examples/export_pgm
+sample_data/*.png
+sample_data/*.pgm
