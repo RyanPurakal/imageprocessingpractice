@@ -1,4 +1,4 @@
-"""Image quality metrics (tensor, batch mean)."""
+"""Image quality metrics for tensors in [0,1]; currently exposes only `batch_psnr`, which is used for validation logging and not during the training loss computation."""
 
 from __future__ import annotations
 

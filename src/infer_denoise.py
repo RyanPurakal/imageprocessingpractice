@@ -1,4 +1,4 @@
-"""Run the trained denoiser and save a visual comparison."""
+"""Inference entry point: loads a checkpoint, sources clean images from either `synthetic_fields` or `field_io` (PNG/PGM via --png/--png-glob), adds noise, runs the model, and writes a 3-row comparison figure to `outputs/`."""
 
 from __future__ import annotations
 

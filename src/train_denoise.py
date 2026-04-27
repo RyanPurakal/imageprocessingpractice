@@ -1,4 +1,4 @@
-"""Train a small U-Net to denoise synthetic scalar fields."""
+"""Training entry point: generates fresh synthetic batches on the fly each epoch, trains `UNetDenoise1ch` with MSE+Adam, logs per-epoch metrics to `outputs/metrics.csv`, and saves the final checkpoint to `checkpoints/denoiser.pt`."""
 
 from __future__ import annotations
 

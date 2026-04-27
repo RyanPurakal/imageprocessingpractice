@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Train the denoising U-Net (run from this directory)."""
+"""CLI entry point for training — delegates entirely to `src.train_denoise.main`; run from the project root so relative checkpoint/output paths resolve correctly."""
 
 from src.train_denoise import main
 

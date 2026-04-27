@@ -1,6 +1,6 @@
 """
-Synthetic 2D scalar fields reminiscent of simulation slices (e.g. pressure or vorticity).
-No solver is involved — just smooth random combinations useful for denoising experiments.
+Synthetic 2D scalar fields reminiscent of simulation slices (e.g. pressure or vorticity); produces clean (B,1,H,W) tensors via superimposed Gaussian blobs and adds AWGN via `add_gaussian_noise`.
+No solver is involved — values are normalised to [0,1] before being returned.
 """
 
 from __future__ import annotations

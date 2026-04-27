@@ -6,6 +6,7 @@ venv/
 outputs/*
 !outputs/*.png
 !outputs/metrics.csv
+!outputs/README.md
 checkpoints/
 *.pt
 .DS_Store

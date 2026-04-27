@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Write a few grayscale PNGs (synthetic scalar fields) into sample_data/ for testing
-the PNG inference path without a C++ postprocessor.
+Writes six 256×256 grayscale PNGs to `sample_data/` using `synthetic_fields.sample_scalar_field` so the `infer.py --png-glob` path can be tested without a real simulation postprocessor.
+Files are gitignored; re-run this script (or `scripts/demo.sh`) after `make clean-outputs` to regenerate them.
 """
 
 from __future__ import annotations

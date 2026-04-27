@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Optional: 2× super-resolution with a pretrained open Swin2SR checkpoint from Hugging Face.
-Accepts grayscale or RGB; converts to RGB for the model. First run downloads weights (~tens of MB).
+Standalone 2× super-resolution script using the pretrained `caidas/swin2SR-lightweight-x2-64` checkpoint from Hugging Face; independent of the U-Net training pipeline.
+Accepts grayscale or RGB input — converts to RGB for the model. First run downloads weights (~tens of MB) via the Transformers cache.
 """
 
 from __future__ import annotations

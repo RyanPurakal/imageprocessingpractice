@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Tiny Hugging Face text-generation demo (DistilGPT-2, open weights on the Hub).
-Useful as a lightweight illustration alongside vision models — not tied to the pixels directly.
+Standalone text-generation demo using DistilGPT-2 via the Hugging Face `pipeline` API; has no dependency on the image denoising pipeline and is included solely as a lightweight LLM illustration.
+Requires `transformers` (already in requirements.txt); downloads the model on first run.
 """
 
 from __future__ import annotations

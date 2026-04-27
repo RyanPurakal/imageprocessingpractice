@@ -1,4 +1,4 @@
-"""Load scalar fields from disk (PNG, PGM, etc.) for inference — matches simulation/C++ export workflows."""
+"""Load scalar fields from disk (PNG, PGM, etc.) for inference — matches simulation/C++ export workflows. Accepts any Pillow-readable format; converts to grayscale and resizes to the checkpoint's spatial resolution."""
 
 from __future__ import annotations
 

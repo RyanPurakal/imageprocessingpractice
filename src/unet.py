@@ -1,4 +1,4 @@
-"""Compact U-Net for single-channel image denoising."""
+"""Compact U-Net for single-channel image denoising; receives a noisy (B,1,H,W) tensor and returns a restored tensor of the same shape. Spatial size must be a multiple of 8 (three pooling stages)."""
 
 from __future__ import annotations
 
@@ -7,6 +7,8 @@ import torch.nn as nn
 
 
 class DoubleConv(nn.Module):
+    """Two consecutive Conv2d+ReLU layers used as the basic building block at each U-Net resolution level."""
+
     def __init__(self, in_ch: int, out_ch: int) -> None:
         super().__init__()
         self.seq = nn.Sequential(
@@ -21,6 +23,8 @@ class DoubleConv(nn.Module):
 
 
 class UNetDenoise1ch(nn.Module):
+    """Encoder–bottleneck–decoder U-Net trained with MSE against clean fields; skip connections concatenate encoder feature maps into the decoder at each scale to preserve spatial detail."""
+
     def __init__(self, base: int = 32) -> None:
         super().__init__()
         self.enc1 = DoubleConv(1, base)
